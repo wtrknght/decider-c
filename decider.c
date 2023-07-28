@@ -5,10 +5,11 @@
 #include <stdbool.h>
 #include <time.h>
 bool ifone;
-int decide(){
+bool decided;
+bool decide(){
   srand(time(NULL));
-  int rando = rand() % 1000000 + 1;
-  if (rando == 1){
+  int rando = rand() % 11 + 1;
+  if (rando == 5){
     ifone = true;
   }
   else{
@@ -18,10 +19,10 @@ int decide(){
 }
 int main(){
   while(1){
-    sleep(21600);
-    if (decide()){
+    sleep(60);
+    decided = decide();
+    if (decided){
       printf("Do it");
-      exit(0);
     }
   }
 }
