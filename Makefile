@@ -1,2 +1,2 @@
 decider:
-	cc decider.c -o decider.exe
+	cc decider.c -o decider
