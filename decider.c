@@ -4,14 +4,15 @@
 #include <unistd.h>
 #include <stdbool.h>
 #include <time.h>
+bool ifone;
 int decide(){
   srand(time(NULL));
-  rando = rand() % 1000000 + 1;
+  int rando = rand() % 1000000 + 1;
   if (rando == 1){
-    bool ifone = true;
+    ifone = true;
   }
   else{
-    bool ifone = false;
+    ifone = false;
   }
   return ifone;
 }
@@ -20,10 +21,7 @@ int main(){
     sleep(21600);
     if (decide()){
       printf("Do it");
-      exit();
-    }
-    else{
-      printf("");
+      exit(0);
     }
   }
 }
