@@ -4,7 +4,6 @@
 #include <unistd.h>
 #include <stdbool.h>
 #include <time.h>
-bool ifone;
 bool decide(){
   srand(time(NULL));
   int rando = rand() % 11 + 1;
