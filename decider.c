@@ -5,24 +5,22 @@
 #include <stdbool.h>
 #include <time.h>
 bool ifone;
-bool decided;
 bool decide(){
   srand(time(NULL));
   int rando = rand() % 11 + 1;
   if (rando == 5){
-    ifone = true;
+    return true;
   }
   else{
-    ifone = false;
+    return false;
   }
-  return ifone;
 }
 int main(){
   while(1){
     sleep(60);
-    decided = decide();
-    if (decided){
+    if (decide()){
       printf("Do it");
     }
   }
+  return 0;
 }
